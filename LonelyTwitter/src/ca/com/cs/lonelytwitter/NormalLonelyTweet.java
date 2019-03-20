@@ -1,4 +1,4 @@
-package ca.ualberta.cs.lonelytwitter;
+package com.ishaat.cs.lonelytwitter;
 
 import java.io.IOException;
 import java.io.Serializable;

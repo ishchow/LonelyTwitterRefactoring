@@ -1,4 +1,4 @@
-package ca.ualberta.cs.lonelytwitter;
+package com.ishaat.cs.lonelytwitter;
 
 import java.util.Date;
 import java.util.List;
@@ -16,8 +16,8 @@ public class LonelyTwitterActivity extends Activity {
 	private EditText bodyText;
 	private ListView oldTweetsList;
 
-	private List<NormalLonelyTweet> tweets;
-	private ArrayAdapter<NormalLonelyTweet> adapter;
+	private List<Tweet> tweets;
+	private ArrayAdapter<Tweet> adapter;
 	private TweetsFileManager tweetsProvider;
 
 	@Override
@@ -43,13 +43,13 @@ public class LonelyTwitterActivity extends Activity {
 	public void save(View v) {
 		String text = bodyText.getText().toString();
 
-		NormalLonelyTweet tweet;
+		Tweet tweet;
 
 		tweet = new NormalLonelyTweet(text, new Date());
 
 		//TODO: use different sub-classes (Normal or Important) based on usage of "*" in the text.
 		
-		if (tweet.isValid()) {
+		if (tweet.isBodyValid()) {
 			tweets.add(tweet);
 			adapter.notifyDataSetChanged();
 

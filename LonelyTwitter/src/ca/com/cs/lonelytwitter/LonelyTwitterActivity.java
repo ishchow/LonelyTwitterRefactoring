@@ -1,4 +1,4 @@
-package ca.ualberta.cs.lonelytwitter;
+package com.ishaat.cs.lonelytwitter;
 
 import java.util.Date;
 import java.util.List;
